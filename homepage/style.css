@@ -1,0 +1,1070 @@
+
+
+:root {
+    --bg: #0b111e;
+    --green: #39f58b;
+    --green-dark: #35f58a;
+
+    --text: #ffffff;
+    --muted: #d4d4d4;
+
+    --border: rgba(255, 255, 255, 0.2);
+
+    --container: 1600px;
+    --side-space: 7.2%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    min-height: 100vh;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   2. NAVBAR
+   LOGO KIRI - MENU SAMPING LOGO
+   WHATSAPP KANAN
+========================================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 100;
+
+    width: 100%;
+    min-height: 65px;
+
+    padding: 0 5.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 32px;
+
+    background: rgba(15, 15, 15, 0.12);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    font-size: 1.3rem;
+    font-weight: 800;
+
+    letter-spacing: 0.2px;
+}
+
+.logo-img-file {
+    width: 55px;
+    height: 48px;
+
+    object-fit: contain;
+}
+
+.highlight {
+    color: var(--green);
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 22px;
+
+    margin: 0;
+
+    flex-shrink: 0;
+}
+
+.nav-links a {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    background: #ff8a43;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links ::after {
+    width: 100%;
+}
+
+
+/* WHATSAPP NAVBAR */
+
+.nav-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+
+    flex-shrink: 0;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+    color: #222222;
+
+    font-size: 0.72rem;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.nav-contact:hover {
+    background: var(--green);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   3. HERO SECTION
+========================================= */
+
+.hero-container {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    max-width: var(--container);
+
+    min-height: 100vh;
+    min-height: 100svh;
+
+    margin: 0 auto;
+
+    padding: 120px var(--side-space) 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* HERO BACKGROUND */
+
+.hero-container::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.60) 0%,
+            rgba(0, 0, 0, 0.43) 55%,
+            rgba(0, 0, 0, 0.60) 100%
+        ),
+
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(0, 0, 0, 0.15) 55%,
+            rgba(0, 0, 0, 0.30) 100%
+        ),
+
+        url("paper cup beranda 2.png");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    width: 100%;
+    max-width: 650px;
+}
+
+.tagline {
+    color: var(--green);
+
+    font-size: 0.88rem;
+    font-weight: 700;
+
+    letter-spacing: -0.2px;
+    line-height: 1.6;
+
+    margin-bottom: 8px;
+}
+
+.hero-content h1 {
+    max-width: 650px;
+
+    font-size: clamp(2.5rem, 4.4vw, 3.8rem);
+
+    line-height: 1.08;
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+
+    margin-bottom: 18px;
+}
+
+.description {
+    max-width: 620px;
+
+    color: #e0e0e0;
+
+    font-size: 0.86rem;
+    font-weight: 400;
+
+    line-height: 1.8;
+
+    margin-bottom: 32px;
+
+    text-align: justify;
+}
+
+
+/* =========================================
+   4. BUTTON
+========================================= */
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.btn {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-radius: 0;
+
+    font-size: 0.76rem;
+    font-weight: 700;
+
+    transition: all 0.3s ease;
+}
+
+.btn-green {
+    background: var(--green-dark);
+    color: #102018;
+
+    border: 1px solid var(--green-dark);
+}
+
+.btn-green:hover {
+    background: #33ff14;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    color: #ffffff;
+
+    background: rgba(0, 0, 0, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================================
+   5. PRODUK SECTION
+========================================= */
+
+.produk-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 85px var(--side-space);
+
+    background: #ffffff;
+    color: #111827;
+}
+
+.produk-container {
+    width: 100%;
+    max-width: var(--container);
+
+    margin: 0 auto;
+}
+
+
+/* HEADER PRODUK */
+
+.produk-header {
+    margin-bottom: 35px;
+}
+
+.produk-label {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: #f0783c;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+}
+
+.produk-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+
+    font-weight: 800;
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 8px;
+}
+
+.produk-header p {
+    color: #777777;
+
+    font-size: 0.82rem;
+    line-height: 1.7;
+}
+
+
+/* GRID PRODUK */
+
+.produk-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* CARD PRODUK */
+
+.produk-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #dedede;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+
+/* GAMBAR PRODUK */
+
+.produk-image {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    border-bottom: 1px solid #dedede;
+}
+
+.produk-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+}
+
+.produk-card:hover .produk-image img {
+    transform: scale(1.04);
+}
+
+
+/* INFORMASI PRODUK */
+
+.produk-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    flex: 1;
+
+    padding: 18px;
+}
+
+.produk-info h3 {
+    margin-bottom: 8px;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.produk-info p {
+    margin-bottom: 15px;
+
+    color: #777777;
+
+    font-size: 0.78rem;
+    line-height: 1.7;
+}
+
+.produk-link {
+    margin-top: auto;
+
+    color: #18834b;
+
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   6. KONTAK SECTION
+========================================= */
+
+.kontak-section {
+    width: 100%;
+
+    padding: 85px var(--side-space);
+
+    background: #0b111e;
+    color: #ffffff;
+}
+
+.kontak-content {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.kontak-content h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.kontak-content p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: #d4d4d4;
+
+    font-size: 0.88rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   7. FLOATING WHATSAPP
+========================================= */
+
+.whatsapp-float {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 200;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 19px;
+
+    border: 1px solid rgba(22, 200, 120, 0.35);
+    border-radius: 50px;
+
+    background: #101b27;
+    color: #ffffff;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-4px);
+
+    background: #142a25;
+}
+
+.wa-icon,
+.wa-arrow {
+    color: var(--green);
+}
+
+
+/* =========================================
+   8. LAPTOP KECIL
+========================================= */
+
+@media (max-width: 1050px) {
+
+    :root {
+        --side-space: 5%;
+    }
+
+    .navbar {
+        gap: 22px;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .logo-img-file {
+        width: 45px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.72rem;
+    }
+
+    .nav-contact {
+        padding: 8px 11px;
+        font-size: 0.65rem;
+    }
+
+    .hero-content {
+        max-width: 580px;
+    }
+
+    .produk-grid {
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================================
+   9. TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        --side-space: 5%;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        min-height: auto;
+
+        padding: 10px 5%;
+
+        display: grid;
+
+        grid-template-columns: minmax(0, 1fr) auto;
+
+        gap: 10px;
+
+        background: rgba(11, 17, 30, 0.78);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .logo {
+        font-size: 0.9rem;
+        gap: 5px;
+    }
+
+    .logo-img-file {
+        width: 35px;
+        height: 32px;
+    }
+
+    .nav-contact {
+        margin-left: 0;
+
+        padding: 8px 12px;
+
+        font-size: 0.65rem;
+    }
+
+    .nav-links {
+        grid-column: 1 / -1;
+        grid-row: 2;
+
+        display: flex;
+
+        justify-content: flex-start;
+
+        gap: 22px;
+
+        margin: 0;
+
+        padding: 12px 0 5px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-links a {
+        font-size: 0.76rem;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        min-height: 100svh;
+
+        padding: 150px 6% 70px;
+
+        align-items: center;
+    }
+
+    .hero-container::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.38) 0%,
+                rgba(0, 0, 0, 0.55) 45%,
+                rgba(0, 0, 0, 0.88) 100%
+            ),
+
+            url("foto model beranda.png");
+
+        background-size: cover;
+
+        background-position: center top;
+
+        background-repeat: no-repeat;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .tagline {
+        font-size: 0.72rem;
+
+        letter-spacing: 0;
+
+        margin-bottom: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.2rem, 7.5vw, 3.2rem);
+
+        line-height: 1.12;
+
+        letter-spacing: -1.2px;
+
+        margin-bottom: 18px;
+    }
+
+    .description {
+        font-size: 0.84rem;
+
+        line-height: 1.75;
+
+        text-align: left;
+
+        margin-bottom: 28px;
+    }
+
+    .btn-group {
+        gap: 10px;
+    }
+
+    .btn {
+        min-height: 44px;
+
+        padding: 12px 17px;
+
+        font-size: 0.76rem;
+    }
+
+
+    /* PRODUK */
+
+    .produk-section {
+        padding: 60px 5%;
+    }
+
+    .produk-header {
+        margin-bottom: 25px;
+    }
+
+    .produk-header h2 {
+        font-size: clamp(1.7rem, 5vw, 2.2rem);
+    }
+
+    .produk-header p {
+        font-size: 0.78rem;
+    }
+
+    .produk-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+    .produk-info {
+        padding: 13px;
+    }
+
+    .produk-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .produk-info p {
+        font-size: 0.73rem;
+    }
+
+    .produk-link {
+        font-size: 0.73rem;
+    }
+
+
+    /* KONTAK */
+
+    .kontak-section {
+        padding: 60px 5%;
+    }
+
+    .kontak-content h2 {
+        font-size: clamp(1.7rem, 5vw, 2.2rem);
+    }
+
+    .kontak-content p {
+        font-size: 0.82rem;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+
+        gap: 9px;
+
+        padding: 12px 16px;
+
+        font-size: 0.78rem;
+    }
+
+}
+
+
+/* =========================================
+   10. MOBILE / HP
+========================================= */
+
+@media (max-width: 480px) {
+
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 9px 4%;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 0.78rem;
+    }
+
+    .logo-img-file {
+        width: 30px;
+        height: 28px;
+    }
+
+    .nav-contact {
+        padding: 8px 10px;
+        font-size: 0.61rem;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+        gap: 18px;
+
+        padding-top: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        min-height: 100svh;
+
+        padding: 145px 6% 60px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 9vw, 2.5rem);
+
+        line-height: 1.13;
+
+        letter-spacing: -1px;
+    }
+
+    .tagline {
+        font-size: 0.67rem;
+    }
+
+    .description {
+        font-size: 0.81rem;
+
+        line-height: 1.75;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* BUTTON */
+
+    .btn-group {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+
+        min-height: 46px;
+    }
+
+
+    /* PRODUK */
+
+    .produk-section {
+        padding: 50px 5%;
+    }
+
+    .produk-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .produk-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .produk-info {
+        padding: 16px;
+    }
+
+    .produk-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .produk-info p {
+        font-size: 0.78rem;
+    }
+
+    .produk-link {
+        font-size: 0.78rem;
+    }
+
+
+    /* KONTAK */
+
+    .kontak-section {
+        padding: 55px 6%;
+    }
+
+    .kontak-content h2 {
+        font-size: 1.75rem;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+
+        padding: 11px 15px;
+
+        font-size: 0.74rem;
+    }
+
+}
+
+
+/* =========================================
+   11. HP KECIL
+========================================= */
+
+@media (max-width: 360px) {
+
+    .logo {
+        font-size: 0.7rem;
+    }
+
+    .logo-img-file {
+        width: 26px;
+    }
+
+    .nav-contact {
+        padding: 7px 8px;
+        font-size: 0.55rem;
+    }
+
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-links a {
+        font-size: 0.64rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .tagline {
+        font-size: 0.61rem;
+    }
+
+}
+
+
+/* =========================================
+   12. REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
